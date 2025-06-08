@@ -16,8 +16,11 @@ function mxdiflg(a1, a2) {
   if (a1.length === 0 || a2.length === 0) {
     return -1;
   } else {
-    const arr = [...a1, ...a2].map(item => item.length);
-    return Math.max(...arr) - Math.min(...arr);
+    const firstArr = [...a1].map(item => item.length);
+    const secondArr = [...a2].map(item => item.length);
+    const max1 = Math.abs(Math.min(...firstArr) - Math.max(...secondArr));
+    const max2 = Math.abs(Math.max(...firstArr) - Math.min(...secondArr));
+    
+    return Math.max(max1, max2);
   }
 }
-
