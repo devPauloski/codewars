@@ -8,9 +8,11 @@
 
 // If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
 
-function arrayDiff(a, b) {
-
-  return a.filter(function(element) {
-    return !b.includes(element);
-  });
+const arrayDiff = (a, b) => {
+  return a.filter(element => !b.includes(element));
 }
+
+let a = [1, 2];
+let b = [1];
+
+console.log(arrayDiff(a, b))
