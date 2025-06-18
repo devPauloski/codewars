@@ -35,9 +35,8 @@ function bouncingBall(h,  bounce,  window) {
         ballPasses = ballPasses + 2;
       }
     }
-    
-    return ballPasses;
-  } else {
-    return ballPasses;
-  }
+  } 
+  
+  return ballPasses;
 }
+
