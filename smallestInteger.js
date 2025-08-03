@@ -1,3 +1,4 @@
+// Find the smallest integer in the array
 // Given an array of integers your solution should find the smallest integer.
 
 // For example:
@@ -9,7 +10,7 @@
 
 function findSmallestInt(arr) {
   let result = Infinity;
-  
+
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] < result) {
       result = arr[i];
