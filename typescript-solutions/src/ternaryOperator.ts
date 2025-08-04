@@ -9,7 +9,7 @@
 // n >= 5 and n < 10 =>	95
 // n >= 10 =>	90
 
-function saleHotdogs(n: number): number {
+export function saleHotdogs(n: number): number {
   let amount:number;
   
   if (n < 5) {
