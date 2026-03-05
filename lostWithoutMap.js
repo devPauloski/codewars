@@ -1,4 +1,5 @@
-/* Given an array of integers, return a new array with each value doubled.
+/* Lost without a map
+Given an array of integers, return a new array with each value doubled.
 
 For example:
 
