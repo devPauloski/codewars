@@ -18,6 +18,7 @@ Error checking for text strings or other invalid inputs is not required, only va
 
 */
 
+// First solution
 function narcissistic(value) {
   // Code me to return true or false
   const digits = value.toString().split("");
@@ -26,6 +27,21 @@ function narcissistic(value) {
 
   for (let i = 0; i < totalDigits; i++) {
     sum = sum + Math.pow(Number(digits[i]), totalDigits);
+  }
+
+  return value === sum;
+}
+
+// Second Solution
+function narcissistic(value) {
+  const digitsCount = Math.floor(Math.log10(value)) + 1;
+  let sum = 0;
+  let n = value;
+
+  while(n > 0) {
+    let digit = n % 10;
+    sum = sum + digit ** digitsCount;
+    n = Math.floor(n / 10);
   }
 
   return value === sum;
