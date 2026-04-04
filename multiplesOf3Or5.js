@@ -10,16 +10,11 @@ Note: If a number is a multiple of both 3 and 5, only count it once.
 */
 
 function solution(number){
-  const multiples = [];
+  let sum = 0;
   for (let i = 3; i < number; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
-      multiples.push(i)
+      sum = sum + i;
     }
-  }
-  
-  let sum = 0;
-  for (let i = 0; i < multiples.length; i++) {
-    sum = sum + multiples[i];
   }
   
   return sum;
