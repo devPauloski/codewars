@@ -14,7 +14,7 @@ public class Palindrome {
     String reverseText = "";
     x = x.toLowerCase().trim();
     int maxIndex = x.length() - 1;
-    
+
     for (int i = maxIndex; i >= 0; i--) {
       reverseText = reverseText + x.charAt(i);
     }
