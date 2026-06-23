@@ -12,27 +12,21 @@ the output should be 7.
 */
 
 function sumTwoSmallestNumbers(numbers) {
-  let smallest = numbers[0];
-  let indexOfSmallest;
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
 
-  for (let i = 1; i < numbers.length; i++) {
-    if (smallest > numbers[i]) {
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < smallest) {
+      secondSmallest = smallest;
       smallest = numbers[i];
-    }
-  } 
-
-  indexOfSmallest = numbers.indexOf(smallest);
-  numbers.splice(indexOfSmallest, 1); 
-  let secondSmallest = numbers[0];
-
-  for (let i = 1; i < numbers.length; i++) {
-    if (secondSmallest > numbers[i]) {
+    } else if (numbers[i] < secondSmallest) {
       secondSmallest = numbers[i];
     }
-  } 
+  }
 
   return smallest + secondSmallest;
 }
 
-console.log(sumTwoSmallestNumbers([2, 9, 3]));
-console.log(sumTwoSmallestNumbers([1, 5, 13, 9, 3]));
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));
+console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));
+
