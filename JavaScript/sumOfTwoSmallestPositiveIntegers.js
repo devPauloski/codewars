@@ -15,6 +15,8 @@ function sumTwoSmallestNumbers(numbers) {
   let smallest = Infinity;
   let secondSmallest = Infinity;
 
+  if (numbers.length < 2) return;
+  
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] < smallest) {
       secondSmallest = smallest;
