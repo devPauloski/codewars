@@ -20,16 +20,11 @@ function longest(s1, s2) {
   const combinedString = s1 + s2;
   const distintValues = { };
 
-  for (let i = 0; i < combinedString.length; i++) {
-    if (combinedString[i] in distintValues) {
-      distintValues[combinedString[i]] = distintValues[combinedString[i]] + 1;
-    } else {
-      distintValues[combinedString[i]] = 1;
-    }
+  for (const char of combinedString) {
+    distintValues[char] = true;
   }
 
-  const uniqueValues = Object.keys(distintValues);
-  return uniqueValues.sort().join("");
+  return Object.keys(distintValues).sort().join("");
 }
 
 console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
